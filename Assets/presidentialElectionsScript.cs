@@ -222,7 +222,8 @@ public class presidentialElectionsScript : MonoBehaviour
                     votes[i] = items;
                     break;
                 case SortingMethod.ColorReadingOrder:
-                    Array.Sort(colors, items);
+                    keys = colors.Select(c => (double)c).ToArray();
+                    Array.Sort(keys, items);
                     votes[i] = items;
                     break;
                 case SortingMethod.ClockwiseTopRight:
@@ -245,7 +246,8 @@ public class presidentialElectionsScript : MonoBehaviour
                     votes[i] = items;
                     break;
                 case SortingMethod.PartyReadingOrder:
-                    Array.Sort(parties, items);
+                    keys = parties.Select(p => (double)p).ToArray();
+                    Array.Sort(keys, items);
                     votes[i] = items;
                     break;
                 case SortingMethod.NameAlphabetical:
@@ -320,7 +322,8 @@ public class presidentialElectionsScript : MonoBehaviour
                     votes[i] = items;
                     break;
                 case SortingMethod.ColorReverseReadingOrder:
-                    Array.Sort(colors, items);
+                    keys = colors.Select(c => (double)c).ToArray();
+                    Array.Sort(keys, items);
                     Array.Reverse(items);
                     votes[i] = items;
                     break;
@@ -342,7 +345,8 @@ public class presidentialElectionsScript : MonoBehaviour
                     votes[i] = items;
                     break;
                 case SortingMethod.PartyReverseReadingOrder:
-                    Array.Sort(parties, items);
+                    keys = parties.Select(p => (double)p).ToArray();
+                    Array.Sort(keys, items);
                     Array.Reverse(items);
                     votes[i] = items;
                     break;
